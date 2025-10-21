@@ -1,0 +1,7 @@
+# Keep folder + docs, ignore big binaries by default
+*
+!.gitignore
+!README.md
+!release-notes/**
+!checksums/**
+!docs/**
