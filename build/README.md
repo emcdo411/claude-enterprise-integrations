@@ -1,10 +1,35 @@
-# build/ (ephemeral)
-Scratch space for local/CI builds. Intermediate artifacts live here and are **not** versioned.
-- mcp-python/: wheel/sdist staging, generated schemas
-- mcp-node/: raw TS build, maps, caches
-- skills/: assembled skill bundles (pre-release)
-- docs-preview/: static site/PDF previews
-- assets/: rendered diagrams/images
-- k8s/: rendered manifests for local tests
-- packages/: course ZIPs before promoting to dist/
-Final, publishable artifacts go to ../dist/.
+# 🧱 build/ (Ephemeral Workspace)
+
+This folder is used for **temporary or intermediate build outputs** generated during development or CI/CD runs.  
+Final, versioned deliverables should go into **`dist/`**.
+
+---
+
+## 📂 Recommended Subfolders
+
+| Folder | Purpose |
+|---------|----------|
+| **mcp-python/** | Python MCP server builds, virtualenvs, or temporary wheels |
+| **mcp-node/** | Raw TypeScript/Node.js transpilation output, source maps, cache |
+| **skills/** | Assembled skill bundles before publishing |
+| **docs-preview/** | Locally rendered docs, PDFs, or static site previews |
+| **assets/** | Compiled diagrams or generated images (Mermaid → PNG/SVG) |
+| **k8s/** | Rendered Helm/Kustomize manifests for local smoke testing |
+| **packages/** | Zipped course or module bundles prior to promotion to `/dist/` |
+
+---
+
+## ⚙️ Usage Guidelines
+- Treated as **scratch space**: contents can be deleted safely.
+- Use `.gitkeep` to preserve folder structure.
+- Do **not** store secrets or production configs here.
+- CI pipelines can freely clean or rebuild this directory.
+
+---
+
+**Final, release-ready artifacts → `/dist/`**  
+**Logs, coverage, test results → `/logs/` and `/coverage/`**
+
+---
+
+📍 _Maintained by Claude Enterprise Integrations Build System_
