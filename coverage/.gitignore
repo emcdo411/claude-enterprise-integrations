@@ -1,0 +1,3 @@
+/coverage/*
+!/coverage/.gitkeep
+!/coverage/README.md
