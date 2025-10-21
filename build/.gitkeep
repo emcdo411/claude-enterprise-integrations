@@ -1,0 +1,6 @@
+# build/.gitignore
+# Ignore everything in build except docs
+*
+!.gitignore
+!README.md
+!.gitkeep
